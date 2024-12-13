@@ -1,16 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+import Button from './components/Button';
+import DefaultInput from './components/DefaultInput';
 
 export default function App() {
   return (
     <View style={[styles.container, {flexDirection: 'column'}]}>
       <StatusBar style="dark" />
-      <Image source={require('./assets/logo-lg.png')} style={{width: 200, height: 200, resizeMode: 'contain',}} />
+      {/* <Image source={require('./assets/logo-lg.png')} style={{width: 200, height: 200, resizeMode: 'contain',}} /> */}
+      <Image source={{uri: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/grab_logo_icon_171051.png'}} style={{width: 200, height: 200, resizeMode: 'contain'}} />
+
       <TextInput style={styles.input} placeholder='Email' keyboardType='email-address' />
       <TextInput style={styles.input} placeholder='Password' secureTextEntry={true} />
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.loginText}>Login</Text>
-      </TouchableOpacity>
+      <Button text='Login' />
+      <DefaultInput text='Notes' />
     </View>
   );
 }
@@ -34,18 +37,5 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     backgroundColor: '#f9f9f9',
     fontSize: 16,
-  },
-  button: {
-    margin: 10,
-    backgroundColor: '#4DB6AC',
-    paddingVertical: 15,
-    paddingHorizontal: 30,
-    borderRadius: 15,
-    width: '100%',
-    alignItems: 'center',
-  },
-  loginText: {
-    fontWeight: 'bold',
-    color: "#fff",
   },
 });
