@@ -1,8 +1,8 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-function Button({text}) {
+function Button({text, onPress}) {
     return (
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={onPress}>
             <Text style={styles.loginText}>{text}</Text>
         </TouchableOpacity>
     )

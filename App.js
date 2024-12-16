@@ -3,16 +3,18 @@ import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'reac
 import Button from './components/Button';
 import DefaultInput from './components/DefaultInput';
 
+
 export default function App() {
   return (
     <View style={[styles.container, {flexDirection: 'column'}]}>
       <StatusBar style="dark" />
       {/* <Image source={require('./assets/logo-lg.png')} style={{width: 200, height: 200, resizeMode: 'contain',}} /> */}
+      <Text>Nyoba Routes</Text>
       <Image source={{uri: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/grab_logo_icon_171051.png'}} style={{width: 200, height: 200, resizeMode: 'contain'}} />
 
       <TextInput style={styles.input} placeholder='Email' keyboardType='email-address' />
       <TextInput style={styles.input} placeholder='Password' secureTextEntry={true} />
-      <Button text='Login' />
+      <Button text='Login'/>
       <DefaultInput text='Notes' />
     </View>
   );
